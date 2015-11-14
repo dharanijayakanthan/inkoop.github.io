@@ -1,0 +1,11 @@
+---
+layout: default
+modal-id: 5
+date: 2014-07-18
+img: veloce-timeline.png
+alt: Veloce
+client: www.velocesocial.com
+technologies: Rails, HTML, CSS, Rescue, Google Drive, Dropbox, Box, Pusher
+portfolio: true
+description: A project management tool that helps you to move forward faster. It have amazing features like Timeline of projects, files management with various storage options, realtime UI.
+---

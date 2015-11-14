@@ -1,0 +1,11 @@
+---
+layout: default
+modal-id: 8
+date: 2014-07-14
+img: magicbox.png
+alt: Magicbox
+client: www.themagicboxapp.com
+portfolio: true
+technologies: Rails, Web crawler, Titanium
+description: An android app built on Titanium which recommends shows you can watch on television. The app learns your preferences over time for recommendations, also you can set reminders for shows and do a lot more. I built both the app and backend API for accessing television data.
+---

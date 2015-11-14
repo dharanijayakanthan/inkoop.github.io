@@ -1,0 +1,9 @@
+---
+layout: services
+date: 2015-07-16
+portfolio: false
+service_name: chef.html
+price: $199
+title: How to deploy with Chef
+description: Content goes here.
+---

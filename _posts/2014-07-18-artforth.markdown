@@ -1,0 +1,11 @@
+---
+layout: default
+modal-id: 3
+date: 2014-07-18
+img: artforth.png
+alt: Artforth
+client: www.artforth.com
+technologies: Rails, Backbone, Isotope, HTML, CSS, Stripe Payment
+portfolio: true
+description: An art rent platform where you can rent upto 3 arts at a time of famous atrists.
+---
