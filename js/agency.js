@@ -1,3 +1,18 @@
+var initialize_owl_carousel = function(){
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    navigation: true,
+    slideSpeed: 300,
+    paginationSpeed: 400,
+    singleItem: true,
+    autoPlay: 4000
+  });
+};
+
+$('div.modal').on('shown.bs.modal', function() {
+  // initialize_owl_carousel();
+});
+
 $('div.modal').on('show.bs.modal', function() {
 	var modal = this;
 	var hash = modal.id;
@@ -16,3 +31,5 @@ if (window.location.hash) {
     $(hash).modal('show');
   }
 };
+
+initialize_owl_carousel();

@@ -3,7 +3,7 @@ layout: default
 modal-id: 1
 date: 2014-07-18
 thumb: cravy_thumb.png
-images: cravy.png
+images: cravy.png,cravy_1.png
 alt: Cravy
 client: www.cravy.in
 technologies: Rails, Solr, Mongo, HTML, CSS, SidekiqPusher

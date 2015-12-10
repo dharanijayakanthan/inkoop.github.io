@@ -2,7 +2,7 @@
 layout: default
 modal-id: 2
 date: 2014-07-18
-thumb: sharethefunpark_thumb.png
+thumb: athletrak_thumb.png
 images: athletrak.png
 alt: Athletrak
 client: www.athletrak.com
