@@ -69,3 +69,7 @@
   -ms-transform: translate3d(0,0,0);
   height: 450px;
 }
+
+.owl-item img {
+	max-height: 450px;
+}
