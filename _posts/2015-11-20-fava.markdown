@@ -2,10 +2,12 @@
 layout: default
 modal-id: 3
 date: 2014-07-18
-img: fava.png
+thumb: fava_thumb.png
+images: fava.png
 alt: Fava
 client: www.fava.ca
 technologies: Rails, HTML, CSS
 portfolio: true
 description: A backend data management system for FAVA(Film and Video Arts Society of Alberta).
+hash: fava
 ---

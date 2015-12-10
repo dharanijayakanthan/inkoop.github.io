@@ -8,3 +8,11 @@ $('div.modal').on('show.bs.modal', function() {
 		}
 	}
 });
+
+if (window.location.hash) {
+  var hash = window.location.hash;
+  var regex = /\#projects\_.*/
+  if (hash.match(regex)) {
+    $(hash).modal('show');
+  }
+};
