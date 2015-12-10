@@ -1,11 +1,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.site_title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="Ruby on Rails Software development consultancy Freelance Expert Programmer Code Bangalore">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <meta property="og:title" content="Inkoop | Web development Consultancy" />
+    <meta property="og:title" content="{{ site.site_title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.inkoop.in" />
     <meta property="og:description" content="Web development Consultancy based in Bangalore | We work on amazing web technologies like Ruby on Rails, Nodejs, Angular, Backbone | Talk to us about your product idea." />
