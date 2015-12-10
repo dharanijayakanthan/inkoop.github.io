@@ -13,7 +13,7 @@
             {% assign posts = site.posts | where: "portfolio", true | sort: "modal-id" %}
             {% for post in posts %}
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#projects_{{ post.hash }}" class="portfolio-link" data-toggle="modal" style="background-image: url('images/portfolio/{{ post.images }}');">
+                    <a href="#projects_{{ post.hash }}" class="portfolio-link" data-toggle="modal" style="background-image: url('images/portfolio/{{ post.thumb }}');">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>

@@ -3,7 +3,7 @@ layout: default
 modal-id: 4
 date: 2014-07-18
 thumb: veloce_thumb.png
-images: veloce-timeline.png
+images: veloce.png
 alt: Veloce
 client: www.velocesocial.com
 technologies: Rails, HTML, CSS, Rescue, Google Drive, Dropbox, Box, Pusher
