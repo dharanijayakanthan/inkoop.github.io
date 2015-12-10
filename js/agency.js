@@ -9,8 +9,8 @@ var initialize_owl_carousel = function(){
   });
 };
 
-$('div.modal').on('shown.bs.modal', function() {
-  // initialize_owl_carousel();
+$('div.modal').on('hidden.bs.modal', function() {
+  window.location.hash = "";
 });
 
 $('div.modal').on('show.bs.modal', function() {
