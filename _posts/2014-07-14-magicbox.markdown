@@ -7,7 +7,7 @@ images: magicbox.png
 alt: Magicbox
 client: www.themagicboxapp.com
 portfolio: true
-technologies: Rails, Web crawler, Titanium
-description: An android app built on Titanium which recommends shows you can watch on television. The app learns your preferences over time for recommendations, also you can set reminders for shows and do a lot more. I built both the app and backend API for accessing television data.
+technologies: Ruby on Rails, Web Crawler, Titanium Mobile Platform, REST API
+description: An android app built on Titanium which recommends Tshows you can watch on television. The app learns your preferences over time for recommendations, also you can set reminders for shows and do a lot more. We built both the app and backend API for accessing television data.<br/> The Backend API was built on Ruby on Rails with proper versioning, Caching.
 hash: magicbox
 ---

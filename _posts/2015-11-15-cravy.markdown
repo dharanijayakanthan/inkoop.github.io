@@ -6,7 +6,7 @@ thumb: cravy_thumb.png
 images: cravy.png,cravy_1.png,cravy_2.png,cravy_3.png
 alt: Cravy
 client: www.cravy.in
-technologies: Rails, Solr, Mongo, HTML, CSS, SidekiqPusher
+technologies: Ruby on Rails, Solr, MongoDB, HTML, CSS, Sidekiq
 portfolio: true
 description: An app to share reviews of food items you like in a restaurant around your city.
 hash: cravy
