@@ -126,7 +126,7 @@ fieldset[disabled] .btn-primary.active {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 700;
-    color: #fff;
+    color: #000;
     background-color: #{{ site.color.primary }};
 }
 
