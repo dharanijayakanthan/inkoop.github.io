@@ -886,7 +886,7 @@ body {
 #contact_form_section {
     padding: 70px 0px 50px;
 }
-#contact_form_section form input, #contact_form_section form select {
+#contact_form_section form input, #contact_form_section form select, #contact_form_section form textarea {
     color: #333;
 }
 #contact_form_section .btn {
