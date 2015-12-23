@@ -883,3 +883,19 @@ body {
 #review_section {
     padding: 0px 0px 50px;
 }
+#contact_form_section {
+    padding: 70px 0px 50px;
+}
+#contact_form_section form input, #contact_form_section form select {
+    color: #333;
+}
+#contact_form_section .btn {
+    color: #fff;
+}
+.gray-text {
+    color: #333 !important;
+}
+.alert {
+    position: relative;
+    top: 80px;
+}

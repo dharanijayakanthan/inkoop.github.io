@@ -30,6 +30,9 @@ if (window.location.hash) {
   if (hash.match(regex)) {
     $(hash).modal('show');
   }
+  if (hash == "#rbct") {
+    $("#rbc_alert_box").removeClass("hidden");
+  };
 };
 
 initialize_owl_carousel();
