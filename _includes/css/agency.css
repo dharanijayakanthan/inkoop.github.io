@@ -883,6 +883,9 @@ body {
 #review_section {
     padding: 0px 0px 50px;
 }
+#review_section #fb-root {
+    margin-bottom: 20px;
+}
 #contact_form_section {
     padding: 70px 0px 50px;
 }
