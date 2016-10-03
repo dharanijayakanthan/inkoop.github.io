@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ "/css/blog.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/highlight.css" | prepend: site.baseurl }}">
+
+  <body id="page-top" class="index">
+    {% include header.html %}
+    <div class="container" id="blog_wrapper">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+    {% include external.html %}
+  </body>
+</html>
