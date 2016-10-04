@@ -130,4 +130,4 @@ Here, the first two lines will basically put all the gemfiles into loadpath succ
 
 Now that you have your setup ready, you can start working. Good Luck!
 
-**~ Ameenashad**
+**~ Ameena Shad**
