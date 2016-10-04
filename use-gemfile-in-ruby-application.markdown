@@ -129,3 +129,5 @@ end
 Here, the first two lines will basically put all the gemfiles into loadpath successflly, without getting a LoadError: no such file to load.
 
 Now that you have your setup ready, you can start working. Good Luck!
+
+**~ Ameenashad**
