@@ -1,7 +1,9 @@
 ---
 layout: blog
-title: Inkoop | Ruby on Rails Developer Consultancy Requirement Bangalore
-description: Request a quote on your Ruby on Rails Project
+title: Inkoop | How to Manage Gems in Ruby applications using Gemfile
+description: How to Manage Gems in Ruby applications using Gemfile
+url: use-gemfile-in-ruby-application
+identifier: blog-use-gemfile-in-ruby-application
 ---
 
 # How to manage gems in ruby application using Gemfile
@@ -127,25 +129,3 @@ end
 Here, the first two lines will basically put all the gemfiles into loadpath successflly, without getting a LoadError: no such file to load.
 
 Now that you have your setup ready, you can start working. Good Luck!
-
-
-<div id="disqus_thread"></div>
-<script>
-
-/**
- *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
- *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
-/*
-var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = '//inkoop-inkoop-in.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
