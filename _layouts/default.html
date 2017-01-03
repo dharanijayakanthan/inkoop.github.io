@@ -14,22 +14,39 @@
   <div class="wrapper">
 
     <!-- HERO -->
-    <section class="module">
-      <div class="container">
+    <!-- <section class="module" style="border: 5px solid red;"> -->
+      <!-- <div class="container" style="border: 5px solid red;"> -->
 
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
+        <!-- <div class="row" style="border: 1px solid black;"> -->
+          <!-- <div class="col-sm-10 col-sm-offset-1"> -->
+<!--  -->
+          <!-- <div> -->
+              
+              <!--  -->
+          <!-- </div> -->
 
-            <div class="text-center">
-              <h1>Tagline here</h1>
-            </div>
+          <!-- </div> -->
+        <!-- </div> -->
 
+      <!-- </div> -->
+      <!-- <div class="text-center "> -->
+        <!-- <video autoplay loop width="920" height="auto" style="opacity: .5; margin-right: -35px;"> -->
+          <!-- <source src="/videos/Hey-World.mp4" type="video/mp4" /> -->
+          <!-- <source src="PATH_TO_WEBM" type="video/webm" /> -->
+        <!-- </video> -->
+        <canvas id="canvas"></canvas>
+        
+          <div  class="text-center" id="text">
+            <h1 style="color: red;" >Everything Connects</h1>
           </div>
-        </div>
-
-      </div>
-    </section>
+        
+      <!-- </div> -->
+    <!-- </section> -->
     <!-- END HERO -->
+    <div>
+      
+    </div>
+   
 
     <!-- PORTFOLIO -->
     <section class="module-xs p-b-0">
@@ -59,7 +76,7 @@
           <!-- PORTFOLIO ITEM -->
           <article class="work-item brand">
             <div class="work-wrapper">
-              <img src="/images/portfolio/1.jpg" alt="">
+              <img src="/images/portfolio/cravy.png" alt="" height="900" width="42">
               <div class="work-overlay">
                 <div class="work-caption">
                   <h6 class="work-title">Mega Menu</h6>
@@ -166,6 +183,41 @@
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/plugins.min.js"></script>
   <script src="/js/custom.min.js"></script>
+  <script src="/js/cd.js"></script>
+  <!-- <script src="/js/arbor.js"></script>   -->
+  <!-- <script src="/js/main.js"></script> -->
+  <script src="/js/dia.js"></script>
+   <script>
+  $("#flickrItems").diamonds({
+      size : 200,
+      gap : 5,
+      hideIncompleteRow : false, // default: false
+      autoRedraw : true, // default: true
+      itemSelector : ".item"
+  });
+  // Check out your browser's console for methods and events that are called.
+  // If autoRedraw is true, try resizing your browser window.
+</script>
+
+  <style type="text/css">
+    #canvas{
+      position: relative;
+      display: block;
+      top: 0;
+      left: 0;
+/*      height: 100px;
+*/      z-index: 100;
+
+    }
+    #text {
+      position: absolute;
+      display: block;
+      text-align: center;
+      z-index: 1000000;
+      width: 100%;
+      top: 500px;
+    }
+  </style>
 
 </body>
 </html>

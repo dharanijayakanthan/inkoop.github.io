@@ -1,0 +1,626 @@
+
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
+<!-- <head> -->
+    <!-- <meta charset="utf-8"> -->
+    <!-- <title>Cavnas Dots connections</title> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
+    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="bootstrap/css/custom.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+<!-- </head> -->
+<!-- <body style="margin: 0; padding: 0;"> -->
+
+<div class="canvas-block">
+    <canvas id="myCanvas1" style="position: absolute;"></canvas>
+    </canvas>
+    <div class="container">
+        <div class="starter-template" style="color: rgba(255,255,255,0.85); margin-top: 50px;">
+            <h1 class="pull-left" id="h1" style="margin-bottom: 0; padding-bottom: 10px;">Canvas Dots</h1>
+            <div class="clearfix"></div>
+            <p class="lead pull-left" id="p">Particular based on canvas and HTML 5</p>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="block-description">
+    <div class="container">
+        <div class="starter-template">
+            <h1>Moleculas</h1>
+            <p class="lead">Random moves of particles, count of dots and connection distance selected by smart algorithm depend from count of dots and square of block. <br> Working on most browser <b>(include mobile devices)</b> without braking. <br>Particles leave from mouse cursor.<br>
+            You can load magnet dots array, and particles will leave from it.<br>In this example magnet dots set behind the text <i>canvas.loadMagnetDots(array);</i>, seems nice, are you agree?</p>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="canvas-block">
+    <canvas id="myCanvas6" style="position: absolute;"></canvas>
+    </canvas>
+</div>
+<div class="block-description">
+    <div class="container">
+        <div class="starter-template">
+            <h1>Shapes</h1>
+            <p class="lead">
+                <i>Available now!</i><br>
+                You can load array of dots to class, and choose what need to build<br>You have callback function, when shape created you can call function to build next shape<br>You also can "destroy" the shape by mouse. Try it!
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="canvas-block">
+    <canvas id="myCanvas2" style="position: absolute;"></canvas>
+</div>
+<div class="block-description">
+    <div class="container">
+        <div class="starter-template">
+            <h1>Bubbles</h1>
+            <p class="lead">Motion like bubbles in soda water :)<br>You can select way to move particles: random, up, down, left, right.<br>Diameter of point depend from connections</p>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="canvas-block">
+    <canvas id="myCanvas3" style="position: absolute;"></canvas>
+</div>
+<div class="block-description">
+    <div class="container">
+        <div class="starter-template">
+            <h1>Snow</h1>
+            <p class="lead">Motion like snow :)<br>You can select color, and choose if need fill dots or not</p>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="canvas-block">
+    <canvas id="myCanvas4" style="position: absolute;"></canvas>
+</div>
+<div class="block-description">
+    <div class="container">
+        <div class="starter-template">
+            <h1>Particles</h1>
+            <p class="lead" style="margin-bottom: 0;">You can choose the character of reflect, by physics law, or random</p>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="canvas-block">
+    <canvas id="myCanvas5" style="position: absolute;"></canvas>
+</div>
+<div class="block-description">
+    <div class="container">
+        <div class="starter-template">
+            <h1>Lines</h1>
+            <p class="lead" style="margin-bottom: 0;">Make circle invisible with <b>setDotsColor([0,0,0,0])</b>. <br>Great effect</p>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="dashed-line"></div>
+<div class="clearfix"></div>
+<div class="block-description">
+    <div class="container">
+        <h1 style="margin-top: 0;">Available options</h1>
+
+        <div class="list-group">
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.speed = 1; <span class="badge">int value; 0:inf.</span></h4>
+                <p class="list-group-item-text">The boundaries of speed correction on reflection</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.sizeMultiplier = 0.5;<span class="badge">float value; 0:inf.</span></h4>
+                <p class="list-group-item-text">Size multiplier (if sizeDependConnections is true)</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.showDirectionVector<span class="badge">boolean value</span></h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.showConnections = true;<span class="badge">boolean value</span></h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.sizeDependConnections = true;<span class="badge">boolean value</span></h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.magnetPowerDelimiter = 10;<span class="badge">int value; 0:inf.</span></h4>
+                <p class="list-group-item-text">“Magnet power” of cursor (if mouseReaction is true)</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.mouseReaction = true;<span class="badge">boolean value</span></h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.randomBounceSides = true;<span class="badge">boolean value</span></h4>
+                <p class="list-group-item-text">Turn true if need random reflection, false - to reflect by physics law</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.fillCircles = true;<span class="badge">boolean value</span></h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.moveDirection = 'random';<span class="badge">string value (up, down, left, right, random)</span></h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.dotsColor = [255,255,255,1];<span class="badge">array value</span></h4>
+                <p class="list-group-item-text">RGBA color of dots</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">options.linesColor = [255,255,255];<span class="badge">array value</span></h4>
+                <p class="list-group-item-text">RGB color of lines</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="dashed-line"></div>
+<div class="clearfix"></div>
+<div class="block-description">
+    <div class="container">
+        <h1 style="margin-top: 0;">Available functions</h1>
+
+        <div class="list-group">
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setSpeed&#8203;(speed)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setSizeDependConnections&#8203;(sizeDependConnections)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setSizeMultiplier&#8203;(sizeMultiplier)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setShowDirectionVector&#8203;(showDirectionVector)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setShowConnections&#8203;(showConnections)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setMouseReaction&#8203;(mouseReaction)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setRandomBounceSides&#8203;(randomBounceSides)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setMoveDirection&#8203;(moveDirection)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setFillCircles&#8203;(fillCircles)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setDotsColor&#8203;(dotsColor)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setLinesColor&#8203;(linesColor)</h4>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">loadMagnetDots&#8203;(dots)</h4>
+                <p class="list-group-item-text">dots = [{x:0,y:0},{x:100,y:100},...]</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">stopAnimation&#8203;()</h4>
+                <p class="list-group-item-text">Stop move</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">startAnimation&#8203;()</h4>
+                <p class="list-group-item-text">Start move (started automatically when initialized)</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">loadSpecificArray&#8203;(id, array)</h4>
+                <p class="list-group-item-text">Load arrays to memory. Id need to build shape</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setSpecificArray&#8203;(id, callback)</h4>
+                <p class="list-group-item-text">Build shape from loaded, call callback function when shape built</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">destroytSpecificArrays&#8203;()</h4>
+                <p class="list-group-item-text">Destroy shape. (Particles continue move)</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setSpecificArrayOffsetX&#8203;()</h4>
+                <p class="list-group-item-text">Set offset of shape from left side of block</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">setSpecificArrayOffsetY&#8203;()</h4>
+                <p class="list-group-item-text">Set offset of shape from top side of block</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+<div class="dashed-line"></div>
+<div class="clearfix"></div>
+<div class="block-description">
+    <div class="container">
+        <h1 style="margin-top: 0;">Example:</h1>
+        <h3>index.html</h3>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;Cavnas Dots connections&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;canvas-block&quot; style=&quot;height:100px;&quot;&gt;
+            &lt;canvas id=&quot;myCanvas&quot; style=&quot;position: absolute;&quot;&gt;&lt;/canvas&gt;
+        &lt;/div&gt;
+        &lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;canvasdots.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+
+        <h3>script.js</h3>
+        <pre>
+var canvas;
+$(document).ready(function(){
+    canvas = $('#myCanvas').canvaDots({
+        sizeDependConnections: false,
+        randomBounceSides: false,
+        dotsColor:[0,0,0,1],
+        linesColor:[0,0,0]
+    });
+
+    // ==== EXAMPLE CALL METHODS ====
+    canvas.stopAnimation(); //Stop animation
+    canvas.startAnimation(); //Start animation
+});
+        </pre>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="dashed-line"></div>
+<div class="clearfix"></div>
+<div class="block-description">
+    <div class="container">
+        <h1 style="margin-top: 0;">Code of second canvas:</h1>
+        <h3 style="cursor: pointer;" onclick="$('#lc').toggle();">Array of letter "C" <i class="fa fa-angle-down" aria-hidden="true"></i></h3>
+        <pre id="lc" style="display: none; margin-bottom: 20px;">
+var arrayC = [];
+arrayC[arrayC.length]={x:0, y:100};
+arrayC[arrayC.length]={x:1, y:83};
+arrayC[arrayC.length]={x:5, y:70};
+arrayC[arrayC.length]={x:6, y:60};
+arrayC[arrayC.length]={x:13, y:44};
+arrayC[arrayC.length]={x:25, y:27};
+arrayC[arrayC.length]={x:35, y:18};
+arrayC[arrayC.length]={x:59, y:6};
+arrayC[arrayC.length]={x:100, y:0};
+arrayC[arrayC.length]={x:135, y:5};
+arrayC[arrayC.length]={x:160, y:20};
+arrayC[arrayC.length]={x:170, y:27};
+arrayC[arrayC.length]={x:180, y:45};
+arrayC[arrayC.length]={x:185, y:60};
+arrayC[arrayC.length]={x:160, y:65};
+arrayC[arrayC.length]={x:135, y:70};
+arrayC[arrayC.length]={x:128, y:59};
+arrayC[arrayC.length]={x:117, y:50};
+arrayC[arrayC.length]={x:99, y:44};
+arrayC[arrayC.length]={x:80, y:50};
+arrayC[arrayC.length]={x:70, y:60};
+arrayC[arrayC.length]={x:65, y:70};
+arrayC[arrayC.length]={x:61, y:83};
+arrayC[arrayC.length]={x:60, y:100};
+arrayC[arrayC.length]={x:61, y:120};
+arrayC[arrayC.length]={x:66, y:134};
+arrayC[arrayC.length]={x:79, y:149};
+arrayC[arrayC.length]={x:99, y:155};
+arrayC[arrayC.length]={x:117, y:50};
+arrayC[arrayC.length]={x:125, y:41};
+arrayC[arrayC.length]={x:130, y:134};
+arrayC[arrayC.length]={x:136, y:117};
+arrayC[arrayC.length]={x:149, y:121};
+arrayC[arrayC.length]={x:158, y:124};
+arrayC[arrayC.length]={x:172, y:128};
+arrayC[arrayC.length]={x:187, y:133};
+arrayC[arrayC.length]={x:181, y:149};
+arrayC[arrayC.length]={x:171, y:169};
+arrayC[arrayC.length]={x:159, y:182};
+arrayC[arrayC.length]={x:134, y:194};
+arrayC[arrayC.length]={x:117, y:197};
+arrayC[arrayC.length]={x:100, y:200};
+arrayC[arrayC.length]={x:75, y:197};
+arrayC[arrayC.length]={x:59, y:193};
+arrayC[arrayC.length]={x:44, y:187};
+arrayC[arrayC.length]={x:36, y:181};
+arrayC[arrayC.length]={x:24, y:171};
+arrayC[arrayC.length]={x:15, y:157};
+arrayC[arrayC.length]={x:11, y:49};
+arrayC[arrayC.length]={x:5, y:134};
+arrayC[arrayC.length]={x:3, y:120};
+arrayC[arrayC.length]={x:1, y:108};
+arrayC[arrayC.length]={x:45, y:12};
+arrayC[arrayC.length]={x:78, y:2};
+arrayC[arrayC.length]={x:118, y:2};
+arrayC[arrayC.length]={x:148, y:11};
+arrayC[arrayC.length]={x:124, y:143};
+        </pre>
+        <div class="clearfix"></div>
+        <h3 style="cursor: pointer;" onclick="$('#ld').toggle();">Array of letter "D" <i class="fa fa-angle-down" aria-hidden="true"></i></h3>
+        <pre id="ld" style="display: none; margin-bottom: 20px;">
+var arrayD = [];
+arrayD[arrayD.length]={x:0, y:0};
+arrayD[arrayD.length]={x:14, y:0};
+arrayD[arrayD.length]={x:27, y:0};
+arrayD[arrayD.length]={x:44, y:0};
+arrayD[arrayD.length]={x:59, y:0};
+arrayD[arrayD.length]={x:71, y:0};
+arrayD[arrayD.length]={x:83, y:0};
+arrayD[arrayD.length]={x:95, y:0};
+arrayD[arrayD.length]={x:119, y:3};
+arrayD[arrayD.length]={x:137, y:11};
+arrayD[arrayD.length]={x:148, y:19};
+arrayD[arrayD.length]={x:156, y:28};
+arrayD[arrayD.length]={x:161, y:36};
+arrayD[arrayD.length]={x:165, y:44};
+arrayD[arrayD.length]={x:171, y:58};
+arrayD[arrayD.length]={x:172, y:69};
+arrayD[arrayD.length]={x:174, y:83};
+arrayD[arrayD.length]={x:175, y:100};
+arrayD[arrayD.length]={x:174, y:119};
+arrayD[arrayD.length]={x:172, y:135};
+arrayD[arrayD.length]={x:168, y:150};
+arrayD[arrayD.length]={x:161, y:162};
+arrayD[arrayD.length]={x:156, y:169};
+arrayD[arrayD.length]={x:146, y:180};
+arrayD[arrayD.length]={x:133, y:188};
+arrayD[arrayD.length]={x:118, y:193};
+arrayD[arrayD.length]={x:95, y:200};
+arrayD[arrayD.length]={x:84, y:200};
+arrayD[arrayD.length]={x:60, y:200};
+arrayD[arrayD.length]={x:43, y:200};
+arrayD[arrayD.length]={x:30, y:200};
+arrayD[arrayD.length]={x:14, y:200};
+arrayD[arrayD.length]={x:0, y:200};
+arrayD[arrayD.length]={x:0, y:190};
+arrayD[arrayD.length]={x:0, y:180};
+arrayD[arrayD.length]={x:0, y:170};
+arrayD[arrayD.length]={x:0, y:155};
+arrayD[arrayD.length]={x:0, y:140};
+arrayD[arrayD.length]={x:0, y:125};
+arrayD[arrayD.length]={x:0, y:110};
+arrayD[arrayD.length]={x:0, y:95};
+arrayD[arrayD.length]={x:0, y:80};
+arrayD[arrayD.length]={x:0, y:65};
+arrayD[arrayD.length]={x:0, y:50};
+arrayD[arrayD.length]={x:0, y:35};
+arrayD[arrayD.length]={x:0, y:20};
+arrayD[arrayD.length]={x:0, y:10};
+arrayD[arrayD.length]={x:59, y:44};
+arrayD[arrayD.length]={x:72, y:44};
+arrayD[arrayD.length]={x:83, y:45};
+arrayD[arrayD.length]={x:94, y:48};
+arrayD[arrayD.length]={x:104, y:53};
+arrayD[arrayD.length]={x:109, y:59};
+arrayD[arrayD.length]={x:113, y:70};
+arrayD[arrayD.length]={x:115, y:81};
+arrayD[arrayD.length]={x:116, y:99};
+arrayD[arrayD.length]={x:116, y:108};
+arrayD[arrayD.length]={x:115, y:120};
+arrayD[arrayD.length]={x:113, y:131};
+arrayD[arrayD.length]={x:108, y:140};
+arrayD[arrayD.length]={x:101, y:148};
+arrayD[arrayD.length]={x:91, y:152};
+arrayD[arrayD.length]={x:82, y:154};
+arrayD[arrayD.length]={x:70, y:153};
+arrayD[arrayD.length]={x:59, y:153};
+arrayD[arrayD.length]={x:59, y:142};
+arrayD[arrayD.length]={x:59, y:130};
+arrayD[arrayD.length]={x:59, y:119};
+arrayD[arrayD.length]={x:59, y:106};
+arrayD[arrayD.length]={x:59, y:93};
+arrayD[arrayD.length]={x:59, y:80};
+arrayD[arrayD.length]={x:59, y:69};
+arrayD[arrayD.length]={x:59, y:54};
+        </pre>
+        <div class="clearfix"></div>
+        <h3 style="cursor: pointer;" onclick="$('#like').toggle();">Array of "Like" <i class="fa fa-angle-down" aria-hidden="true"></i></h3>
+        <pre id="like" style="display: none; margin-bottom: 20px;">
+var arrayL = [];
+arrayL[arrayL.length]={x:0, y:86};
+arrayL[arrayL.length]={x:6, y:80};
+arrayL[arrayL.length]={x:16, y:80};
+arrayL[arrayL.length]={x:34, y:80};
+arrayL[arrayL.length]={x:45, y:80};
+arrayL[arrayL.length]={x:51, y:86};
+arrayL[arrayL.length]={x:62, y:86};
+arrayL[arrayL.length]={x:71, y:80};
+arrayL[arrayL.length]={x:81, y:70};
+arrayL[arrayL.length]={x:86, y:64};
+arrayL[arrayL.length]={x:92, y:57};
+arrayL[arrayL.length]={x:100, y:46};
+arrayL[arrayL.length]={x:108, y:35};
+arrayL[arrayL.length]={x:112, y:19};
+arrayL[arrayL.length]={x:116, y:7};
+arrayL[arrayL.length]={x:122, y:0};
+arrayL[arrayL.length]={x:134, y:1};
+arrayL[arrayL.length]={x:143, y:4};
+arrayL[arrayL.length]={x:148, y:10};
+arrayL[arrayL.length]={x:152, y:19};
+arrayL[arrayL.length]={x:153, y:26};
+arrayL[arrayL.length]={x:153, y:34};
+arrayL[arrayL.length]={x:151, y:44};
+arrayL[arrayL.length]={x:148, y:51};
+arrayL[arrayL.length]={x:143, y:63};
+arrayL[arrayL.length]={x:153, y:63};
+arrayL[arrayL.length]={x:167, y:63};
+arrayL[arrayL.length]={x:182, y:64};
+arrayL[arrayL.length]={x:191, y:69};
+arrayL[arrayL.length]={x:197, y:74};
+arrayL[arrayL.length]={x:201, y:85};
+arrayL[arrayL.length]={x:201, y:94};
+arrayL[arrayL.length]={x:198, y:102};
+arrayL[arrayL.length]={x:194, y:106};
+arrayL[arrayL.length]={x:197, y:112};
+arrayL[arrayL.length]={x:196, y:121};
+arrayL[arrayL.length]={x:195, y:128};
+arrayL[arrayL.length]={x:191, y:134};
+arrayL[arrayL.length]={x:193, y:141};
+arrayL[arrayL.length]={x:191, y:148};
+arrayL[arrayL.length]={x:189, y:154};
+arrayL[arrayL.length]={x:184, y:160};
+arrayL[arrayL.length]={x:184, y:167};
+arrayL[arrayL.length]={x:182, y:176};
+arrayL[arrayL.length]={x:178, y:183};
+arrayL[arrayL.length]={x:170, y:189};
+arrayL[arrayL.length]={x:161, y:193};
+arrayL[arrayL.length]={x:151, y:193};
+arrayL[arrayL.length]={x:139, y:193};
+arrayL[arrayL.length]={x:128, y:193};
+arrayL[arrayL.length]={x:117, y:190};
+arrayL[arrayL.length]={x:107, y:188};
+arrayL[arrayL.length]={x:98, y:185};
+arrayL[arrayL.length]={x:90, y:183};
+arrayL[arrayL.length]={x:82, y:180};
+arrayL[arrayL.length]={x:75, y:178};
+arrayL[arrayL.length]={x:66, y:176};
+arrayL[arrayL.length]={x:61, y:172};
+arrayL[arrayL.length]={x:51, y:172};
+arrayL[arrayL.length]={x:49, y:175};
+arrayL[arrayL.length]={x:46, y:177};
+arrayL[arrayL.length]={x:41, y:176};
+arrayL[arrayL.length]={x:35, y:177};
+arrayL[arrayL.length]={x:26, y:177};
+arrayL[arrayL.length]={x:17, y:177};
+arrayL[arrayL.length]={x:10, y:177};
+arrayL[arrayL.length]={x:5, y:177};
+arrayL[arrayL.length]={x:2, y:174};
+arrayL[arrayL.length]={x:0, y:171};
+arrayL[arrayL.length]={x:0, y:165};
+arrayL[arrayL.length]={x:0, y:155};
+arrayL[arrayL.length]={x:0, y:145};
+arrayL[arrayL.length]={x:0, y:135};
+arrayL[arrayL.length]={x:0, y:125};
+arrayL[arrayL.length]={x:0, y:115};
+arrayL[arrayL.length]={x:0, y:105};
+arrayL[arrayL.length]={x:0, y:95};
+arrayL[arrayL.length]={x:57, y:94};
+arrayL[arrayL.length]={x:57, y:100};
+arrayL[arrayL.length]={x:57, y:107};
+arrayL[arrayL.length]={x:57, y:113};
+arrayL[arrayL.length]={x:57, y:119};
+arrayL[arrayL.length]={x:57, y:126};
+arrayL[arrayL.length]={x:57, y:134};
+arrayL[arrayL.length]={x:57, y:141};
+arrayL[arrayL.length]={x:57, y:148};
+arrayL[arrayL.length]={x:57, y:153};
+arrayL[arrayL.length]={x:57, y:160};
+arrayL[arrayL.length]={x:57, y:166};
+arrayL[arrayL.length]={x:184, y:107};
+arrayL[arrayL.length]={x:183, y:134};
+arrayL[arrayL.length]={x:177, y:158};
+        </pre>
+        <div class="clearfix"></div>
+
+        <div class="clearfix"></div>
+        <h3 id="howToLoadArray" style="cursor: pointer;" onclick="$('#loadArray').toggle();">How to load array to my canvas? <i class="fa fa-angle-down" aria-hidden="true"></i></h3>
+        <pre id="loadArray" style="display: none; margin-bottom: 20px;">
+canvas=$("#myCanvas").canvaDots({sizeDependConnections:false,speed:2 }); //Initialize canvas
+canvas.loadSpecificArray(1, arrayC);        // Load letter C to memory of canvas
+canvas.loadSpecificArray(2, arrayD);        // Load letter D to memory of canvas
+canvas.loadSpecificArray('like', arrayL);   // Load Like to memory of canvas
+
+canvas.setSpecificArray(1, function(){}); // To build letter C; Callback function when shape be created
+canvas.setSpecificArray(2, function(){}); // To build letter D
+canvas.setSpecificArray(3, function(){}); // To build Like
+        </pre>
+
+        <h3 style="cursor: pointer;" onclick="$('#instruction').toggle();">How to get array of dots? <i class="fa fa-angle-down" aria-hidden="true"></i></h3>
+        <div id="instruction" style="display: none; margin-bottom: 20px; text-align: center;">
+            <p style="border: none;">For example: we have canvas with 300px height, and we need to create letter "C"</p>
+            <img src="/images/canvas.jpg">
+            <p>We created new file in Photoshop with size 300px height <i>(and set margin from top and bottom 50px in example)</i></p>
+            <img src="/images/c.png">
+            <p>Need to set locate points equally along the contour</p>
+            <img src="/images/c_dots.jpg">
+            <p>And get coordinates of all dots step by step</p>
+            <img src="/images/c_dots_xy.jpg">
+            <p>In Photoshop you can open help window where you can see position of your cursor in XY coodinates</p>
+            <img src="/images/ps.jpg">
+            <p>When you get all coordinates you can load array to plugin and build your custom shape!</p>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+<div style="width: 100%; text-align: center; display: block;">
+    <a href="http://codecanyon.net/item/canvas-dots/16227884" target="_blank" class="codecanyon">
+        You can buy this item here
+    </a>
+</div>
+<div class="block-description" style="text-align: center;">
+    &copy; All rights reserved 2016
+</div>
+<style>
+    #instruction > p{
+        width: 100%;
+        text-align: justify;
+        margin: 10px 0;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    #instruction > img{
+        border:1px dashed #000000;
+        max-height: 300px;
+    }
+</style>
+
+<script src="jquery.js"></script>
+<script src="canvasDots/canvasdots.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-78274824-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    var _mfq = _mfq || [];
+    (function() {
+        var mf = document.createElement("script");
+        mf.type = "text/javascript"; mf.async = true;
+        mf.src = "//cdn.mouseflow.com/projects/bf6b60af-cda0-4fd5-bc48-a6fc51a76b25.js";
+        document.getElementsByTagName("head")[0].appendChild(mf);
+    })();
+</script>
+<!-- </body> -->
+<!-- </html> -->
