@@ -1,11 +1,33 @@
-<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
-  <div class="container text-center">
-    <div class="navbar-header page-scroll">
-      <a class="navbar-brand page-scroll" href="/">{{site.title}}</a>
+<header class="header header-fixed header-transparent">
+  <div class="container">
+    <!-- YOUR LOGO HERE -->
+    <div class="inner-header">
+      <a class="inner-brand" href="index.html">
+        <img class="brand-light" src="images/logo-light.png" width="100" alt="">
+        <img class="brand-dark" src="images/logo-dark.png" width="100" alt="">
+      </a>
     </div>
-  </div>
-</nav>
+  
+    <!-- OPEN MOBILE MENU -->
+    <div class="main-nav-toggle">
+      <div class="nav-icon-toggle" data-toggle="collapse" data-target="#custom-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+    </div>
 
-<div class="alert alert-success hidden" role="alert" id="rbc_alert_box">
-  We have received your request and will respond to you soon.
-</div>
+    <!-- MAIN MENU -->
+    <nav id="custom-collapse" class="main-nav collapse clearfix">
+      <ul class="inner-nav pull-right">
+        <li>
+          <a href="#">Our Work</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  
+  </div>
+</header>
