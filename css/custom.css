@@ -4,3 +4,7 @@
 .site_description {
   font-size: 36px;
 }
+.feature img {
+  height: 250px;
+  border: 1px solid #3498db;
+}
