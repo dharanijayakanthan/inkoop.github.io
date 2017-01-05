@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+  {% include external.html %}
   {% include head.html %}
-
-  <body id="page-top" class="index">
-    {% include header.html %}
-    {% include portfolio_grid.html %}
-    {% include review.html %}
-    {% include contact.html %}
+  {% include header.html %}
+  <body>
+    <!-- PRELOADER -->
+    <div class="page-loader">
+      <div class="loader">Loading...</div>
+    </div>
+    <!-- END PRELOADER -->
+    <div class="wrapper">
+      {{ content }}
+    </div>
     {% include footer.html %}
-    {% include modals.html %}
-    {% include js.html %}
-    {% include external.html %}
   </body>
 </html>

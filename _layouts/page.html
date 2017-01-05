@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  {% include external.html %}
   {% include head.html %}
-
-  <body id="page-top" class="index">
-    {% include header.html %}
-    {{ content }}
+  {% include blog_header.html %}
+  <link rel="stylesheet" href="/css/blog.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <body>
+    <!-- PRELOADER -->
+    <div class="page-loader">
+      <div class="loader">Loading...</div>
+    </div>
+    <!-- END PRELOADER -->
+    <div class="container wrapper m-b-20">
+      <div class="row">
+        <div class="col-md-12">
+          {{ content }}
+        </div>
+      </div>
+    </div>
     {% include footer.html %}
-    {% include external.html %}
   </body>
 </html>

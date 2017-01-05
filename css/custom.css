@@ -1,0 +1,14 @@
+.bg-black-alfa-30:before {
+  background: rgba(0, 0, 0, 0.8);
+}
+.site_description {
+  font-size: 36px;
+}
+.feature .image {
+  height: 200px;
+  border: 1px solid #3498db;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  margin-bottom: 20px;
+}
