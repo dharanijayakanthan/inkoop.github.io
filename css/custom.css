@@ -1,6 +1,9 @@
 .bg-black-alfa-30:before {
   background: rgba(0, 0, 0, 0.8);
 }
+.bg-black-alfa-40:before {
+  background: rgba(0, 0, 0, 0.7); 
+}
 .site_description {
   font-size: 36px;
 }
