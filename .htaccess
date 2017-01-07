@@ -1,0 +1,7 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    <FilesMatch \.(css|js|jpg|png)$>
+        ExpiresDefault "access plus 1 year"
+    </FilesMatch>
+</IfModule>
