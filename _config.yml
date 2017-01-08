@@ -27,6 +27,7 @@ permalink: pretty
 gems:
   - jekyll-sitemap
   # - jekyll-press
+  - jekyll-assets
 
 assets:
   cache: true
@@ -40,3 +41,18 @@ assets:
 compress_html:
   clippings: all
   comments: all
+
+assets:
+  autowrite: true
+  cache: true
+  cache_type: memory
+  cdn: http://da0et0vglk78a.cloudfront.net
+  skip_baseurl_with_cdn: false
+  skip_prefix_with_cdn: false
+  digest: true
+  sources:
+    - css
+    - images
+    - js
+    - fonts
+  
