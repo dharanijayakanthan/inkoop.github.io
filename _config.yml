@@ -41,7 +41,6 @@ compress_html:
 
 assets:
   autowrite: true
-  cache: true
   cache_type: memory
   cdn: http://da0et0vglk78a.cloudfront.net
   skip_baseurl_with_cdn: false
