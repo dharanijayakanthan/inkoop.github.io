@@ -1,3 +1,8 @@
+---
+layout: none
+permalink: .htaccess
+---
+
 <IfModule mod_expires.c>
   ExpiresActive On
 
