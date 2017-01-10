@@ -1,9 +1,7 @@
 ---
 layout: blog
-title: Inkoop | Web Scraping using selenium in Ruby
+title: Web Scraping using selenium in Ruby | Inkoop
 description: Web Scraping using selenium in Ruby
-url: web-scraping-using-selenium-ruby
-identifier: blog-web-scraping-using-selenium-ruby
 ---
 
 # Web Scraping using selenium in Ruby

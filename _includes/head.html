@@ -8,9 +8,9 @@
   
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.site_title }}{% endif %}</title>
 
-  <meta property="og:title" content="{{ site.site_title }}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.site_title }}{% endif %}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.inkoop.in" />
+  <meta property="og:url" content="http://www.inkoop.in{{ page.url }}" />
   <meta property="og:description" content="Web development Consultancy Services based in Bangalore | We work on amazing web technologies like Ruby on Rails, Nodejs, Angular, Backbone | Talk to us about your product idea." />
   <meta property="og:image" content="http://www.inkoop.in/images/logo.jpg" />
   <!-- Bootstrap core CSS -->

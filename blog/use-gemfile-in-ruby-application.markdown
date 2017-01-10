@@ -1,9 +1,7 @@
 ---
 layout: blog
-title: Inkoop | How to Manage Gems in Ruby applications using Gemfile
+title: How to Manage Gems in Ruby applications using Gemfile | Inkoop
 description: How to Manage Gems in Ruby applications using Gemfile
-url: use-gemfile-in-ruby-application
-identifier: blog-use-gemfile-in-ruby-application
 ---
 
 # How to manage gems in ruby application using Gemfile
