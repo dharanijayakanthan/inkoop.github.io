@@ -1,21 +1,21 @@
 ---
 layout: blog
 title: Inkoop | Web Scraping using Selenium in Ruby
-description: Web Scraping using selenium in Ruby
+description: Web Scraping using Selenium in Ruby
 url: web-scraping-using-selenium-ruby
 identifier: blog-web-scraping-using-selenium-ruby
 ---
 
-# Web Scraping using selenium in Ruby
+# Web Scraping using Selenium in Ruby
 
 Not every website offer an API or mechanism to access the data programmatically, web scraping will be the only way to extract the website information.
 
 There are different tools available to scrape the information from a website and one amongst them is Selenium-webdriver. The rest of the document exclusively deals with selenium.
 
-Before doing anything make sure the gem selenium-webdriver is installed. 
+Before doing anything make sure the gem selenium-webdriver is installed.
 
-```ruby
-gem install selenium-webdriver 
+```bash
+gem install selenium-webdriver
 bundle install
 ```
 
