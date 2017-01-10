@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Inkoop | Web Scraping using selenium in Ruby
+title: Inkoop | Web Scraping using Selenium in Ruby
 description: Web Scraping using selenium in Ruby
 url: web-scraping-using-selenium-ruby
 identifier: blog-web-scraping-using-selenium-ruby
@@ -16,7 +16,7 @@ Before doing anything make sure the gem selenium-webdriver is installed.
 
 ```ruby
 gem install selenium-webdriver 
-run bundle install
+bundle install
 ```
 
 Now, include the gem, selenium-webdriver in the ruby app.
