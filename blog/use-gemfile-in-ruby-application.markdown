@@ -6,7 +6,7 @@ description: How to Manage Gems in Ruby applications using Gemfile
 
 # How to manage gems in ruby application using Gemfile
 
-Lets say you writing a simple ruby application for addition of numbers which takes n number of arguments and returns a sum of the values passed.
+Lets say you are writing a simple ruby application for addition of numbers which takes n number of arguments and returns a sum of the values passed.
 
 ```ruby
 # addition.rb

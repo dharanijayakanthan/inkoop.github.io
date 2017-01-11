@@ -36,14 +36,14 @@ require "selenium-webdriver"
 driver = Selenium::WebDriver.for :chrome
 ```
 
-The first thing is to navigate the driver to the page that you need to scrape and load the url. I will be scraping [Priyanka Chopra](https://en.wikipedia.org/wiki/Priyanka_Chopra) and will be concentrating on fetching the name, birth place and the image url of the person.
+The first thing is to navigate the driver to the page that you need to scrape and load the url. I will be scraping [Yukihiro Matsumoto](https://en.wikipedia.org/wiki/Yukihiro_Matsumoto) and will be concentrating on fetching the name, birth place and the image url of the person.
 
 ```ruby
 # scraping.rb
 
 require "selenium-webdriver"
 driver = Selenium::WebDriver.for :chrome
-driver.navigate.to "https://en.wikipedia.org/wiki/Priyanka_Chopra"
+driver.navigate.to "https://en.wikipedia.org/wiki/Yukihiro_Matsumoto"
 ```
 
 Now that we have loaded the page, the next thing is to look through the web page and start locating the elements. But, before which define the explicit wait for 20 seconds so that it waits for 20 seconds before throwing a TimeoutException.
@@ -57,24 +57,24 @@ The method,find_element accepts the name and the value of the selector and retur
 
 require "selenium-webdriver"
 driver = Selenium::WebDriver.for :chrome
-driver.navigate.to "https://en.wikipedia.org/wiki/Priyanka_Chopra"
+driver.navigate.to "https://en.wikipedia.org/wiki/Yukihiro_Matsumoto"
 wait = Selenium::WebDriver::Wait.new(:timeout => 20)
 ```
 
-The class selector will look for the class name firstHeading in the webpage and return the webelement and will be saved in the name variable. In order to get only the text then call text method on the variable to display the name Priyanka Chopra.
+The class selector will look for the class name firstHeading in the webpage and return the webelement and will be saved in the name variable. In order to get only the text then call text method on the variable to display the name Yukihiro Matsumoto.
 
 ```ruby
 # scraping.rb
 
 require "selenium-webdriver"
 driver = Selenium::WebDriver.for :chrome
-driver.navigate.to "https://en.wikipedia.org/wiki/Priyanka_Chopra"
+driver.navigate.to "https://en.wikipedia.org/wiki/Yukihiro_Matsumoto"
 wait = Selenium::WebDriver::Wait.new(:timeout => 20)
 name = wait.until {
   element_1 = driver.find_element(:class, "firstHeading")
 }
 puts name.text        
-# Priyanka Chopra
+# Yukihiro Matsumoto
 ```
 
 In order to get the birth place the css selector can be used to match three classes, infobox class, biography class, vcard class and will be stored in element_2. Now, element_2 will have to look for class name birthplace and store it in born variable. Finally, call the text method on born to obtain the birth place.
@@ -88,7 +88,7 @@ born = wait.until {
   element_2.find_element(:class, "birthplace")
 }
 puts born.text        
-# Jamshedpur, Bihar, India (now Jharkhand, India)
+# Osaka Prefecture, Japan
 ```
 
 The final thing is to get the image url, hence look for the class name image and call attribute method by passing href as an argument which eventually returns the url.
@@ -101,7 +101,7 @@ image_url = wait.until {
   element_3 = driver.find_element(:class, "image").attribute("href")
 }
 puts image_url        
-# https://en.wikipedia.org/wiki/File:Priyanka_nikon_camera.jpg
+# https://en.wikipedia.org/wiki/File:Yukihiro_Matsumoto.JPG
 ```
 
 After everything is scraped, close the driver.
@@ -110,7 +110,7 @@ After everything is scraped, close the driver.
 # scraping.rb
 ...
 puts image_url        
-# https://en.wikipedia.org/wiki/File:Priyanka_nikon_camera.jpg
+# https://en.wikipedia.org/wiki/File:Yukihiro_Matsumoto.JPG
 driver.quit 
 ```
 Enjoy Scraping!!!
