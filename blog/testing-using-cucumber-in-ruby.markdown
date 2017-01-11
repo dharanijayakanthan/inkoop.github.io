@@ -1,10 +1,10 @@
 ---
 layout: blog
-title: Testing using Cucumber | Inkoop
-description: Testing using Cucumber
+title: Testing using Cucumber in Ruby | Inkoop
+description: Testing using Cucumber in Ruby
 ---
 
-# Testing using Cucumber
+# Testing using Cucumber in Ruby
 
 Cucumber focuses on behavioural aspect of the project which gives a clear understanding of what the system 
 must do from the perspective of the user. So, basically it tests the UI workflow of the system than the 
