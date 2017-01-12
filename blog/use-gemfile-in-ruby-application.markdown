@@ -4,7 +4,7 @@ title: How to Manage Gems in Ruby applications using Gemfile | Inkoop
 description: How to Manage Gems in Ruby applications using Gemfile
 ---
 
-# How to manage gems in ruby application using Gemfile
+# How to manage Gems in Ruby application using Gemfile
 
 Lets say you are writing a simple ruby application for addition of numbers which takes n number of arguments and returns a sum of the values passed.
 
@@ -128,4 +128,4 @@ Here, the first two lines will basically put all the gemfiles into loadpath succ
 
 Now that you have your setup ready, you can start working. Good Luck!
 
-**~ Ameena Shad**
+**~ Ameena **

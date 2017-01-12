@@ -140,4 +140,4 @@ rake cucumber
 
 Get started with the cucumber!!!
 
-**~ Ameena Shad**
+**~ Ameena **
