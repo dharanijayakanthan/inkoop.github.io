@@ -1,10 +1,10 @@
 ---
 layout: blog
-title: A Way to list files and folders of a bucket of S3 using prefix and delimiter in Ruby | Inkoop
-description: A Way to list files and folders of a bucket of S3 using prefix and delimiter in Ruby
+title: List files and folders of a bucket of S3 using prefix and delimiter in Ruby | Inkoop
+description: List files and folders of a bucket of S3 using prefix and delimiter in Ruby
 ---
 
-# A Way to list files and folders of a bucket of S3 using prefix and delimiter in Ruby
+# List files and folders of a bucket of S3 using prefix and delimiter in Ruby
 
 Before we get started, it is important to know few things.
 
@@ -18,7 +18,7 @@ The first step is to create the s3 object with proper credentials
 ```ruby
 #aws_objects.rb 
 s3 = Aws::S3::Resource.new({
-  region: ENV['AWS_REGION'],
+    region: ENV['AWS_REGION'],
     access_key_id: ENV['AWS_ACCESS_KEY_ID'], 
     secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
   })
