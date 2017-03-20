@@ -8,11 +8,11 @@ description: Generate Invoice using Quickbook App in Rails - Part 1
 
 Quickbook is a software which is mainly used to organize the expenses of a small scale or medium scaled business.
 
-In order to integrate to quickbook you need to install the gems omniauth and omniauth-quickbooks. The gem omniauth-quickbooks is used to authenticate with quickbooks using omniauth gem.
+In order to integrate to quickbook you need to install the gems omniauth and omniauth-quickbooks. These gems are used to authenticate with quickbooks.
 
 This guide will walk you through the process of generating invoice through a gem quickbooks-ruby. Include all three gems in the Gemfile and bundle it.
 
-By default, the gem quickbooks-ruby will be in production mode but you can make changes if you want to run it in other mode.
+By default, the gem quickbooks-ruby will be in production mode but you can make changes if you want to run it in other mode(development or testing).
 
 Next, create a rails initializer and set the OAUTH_CONSUMER_KEY and OAUTH_CONSUMER_SECRET properly and once authenticated set the callback in the routes in order to tell rails that the request that is sent by the app should be handled in some controller's action to proceed further. We obviously do not want to connect to Quickbook often, hence you can set the OAuth access credentials with four fields access_token, access_secret, company_id, token_expires_at.
 
@@ -62,15 +62,16 @@ end
 ```
 The above piece of code has two methods, the first method ultimately is used to create the user in the quickbook. The service object instantiates for the Customer as shown in the very first line. Then set the access_token and company_id for the service object and after which a new customer is created.
 
-The second method set_user_information accepts an argument which is the quickbook_customer on which the data should be set. Methods like given_name, display_name, print_on_check_name, fully_qualified_name is called on the quickbook_customer to set the name but for setting email, phone number and address you need to create a new object of the class(EmailAddress, TelephoneNumber, PhysicalAddress) and then set the data as shown clearly in the code.
+The second method set_user_information accepts an argument which is an object of the Quickbook's customer on which the data should be set. Methods like given_name, display_name, print_on_check_name, fully_qualified_name is called on the quickbook_customer to set the name but for setting email, phone number and address you need to create a new object of the class(EmailAddress, TelephoneNumber, PhysicalAddress) and then set the data as shown clearly in the code.
 
-service.create(quickbook_customer) will create a new quickbook customer with an id as its primary key of the table, say 21 in this case.
+service.create(quickbook_customer) will create a new quickbook customer with an id as its primary key, say 21 in this case.
 
 Case 2:
 
 If the user already exists in quickbook then get the customer and update it. 
 
 ```ruby
+...
 def update_user_information
   service = Quickbooks::Service::Customer.new
   service.access_token = access_token
@@ -83,7 +84,7 @@ end
 
 Method update_user_information is to update the data of the existing customer. On service object call fetch_by_id and pass the id of the customer created in the quickbook and then set the data same as we did while building but instead of calling create we call an update method on the service object to update.
 
-There are couples of things that you can play with the service object like 
+There are couples of things that you can play with the service object 
 
 ```ruby
 users = service.all
