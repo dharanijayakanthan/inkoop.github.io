@@ -98,7 +98,7 @@ It will be a SQL like structure to retrieve objects.
 
 In the next post there will be a procedure to generate the invoices for the created customer.
 
-Click [here](http://www.inkoop.in/blog/generate-invoice-using-quickbook-app-in-rails-1/) to check the part 2.
+Click [here](http://www.inkoop.in/blog/generate-invoice-using-quickbook-app-in-rails-1/) to check part 2.
 
 
 **~ Ameena **
