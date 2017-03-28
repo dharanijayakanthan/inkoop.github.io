@@ -16,7 +16,7 @@ By default, the gem quickbooks-ruby will be in production mode but you can make 
 
 Next, create a rails initializer and set the OAUTH_CONSUMER_KEY and OAUTH_CONSUMER_SECRET properly and once authenticated set the callback in the routes in order to tell rails that the request that is sent by the app should be handled in some controller's action to proceed further. We obviously do not want to connect to Quickbook often, hence you can set the OAuth access credentials with four fields access_token, access_secret, company_id, token_expires_at.
 
-After all the important and basic setup, now its time to learn how to generate invoices for the user. Without an user generating invoices makes no sense. Hence, the first thing is to know the user for which we are generating the invoice. There are two possible cases for this:
+After, all the important and basic setup is done now its time to learn how to generate invoices for the user. Without an user generating invoices makes no sense. Hence, the first thing is to know the user for which we are generating the invoice. There are two possible cases for this:
 
 1) If the user does not exist in quickbook, create the user and generate the invoice.
 
@@ -39,17 +39,17 @@ end
 
 def set_user_information quickbook_customer
   # Name
-    quickbook_customer.given_name = quickbook_customer.display_name = 
-    quickbook_customer.print_on_check_name = 
-    quickbook_customer.fully_qualified_name = "First Last"
+  quickbook_customer.given_name = quickbook_customer.display_name = 
+  quickbook_customer.print_on_check_name = 
+  quickbook_customer.fully_qualified_name = "First Last"
   # Email
-    quickbook_email = Quickbooks::Model::EmailAddress.new
-    quickbook_email.address = "firstlast@abc.com"
-    quickbook_customer.primary_email_address = quickbook_email
+  quickbook_email = Quickbooks::Model::EmailAddress.new
+  quickbook_email.address = "firstlast@abc.com"
+  quickbook_customer.primary_email_address = quickbook_email
   # Phone Number
-    quickbook_phone_number = Quickbooks::Model::TelephoneNumber.new
-    quickbook_phone_number.free_form_number = 9876543210
-    quickbook_customer.primary_phone = quickbook_phone_number
+  quickbook_phone_number = Quickbooks::Model::TelephoneNumber.new
+  quickbook_phone_number.free_form_number = 9876543210
+  quickbook_customer.primary_phone = quickbook_phone_number
   # Address
   quickbook_address = Quickbooks::Model::PhysicalAddress.new
   quickbook_address.line1 = "line1"
@@ -96,7 +96,9 @@ users = service.query()
 ```
 It will be a SQL like structure to retrieve objects.
 
-In the next post there will be a procedure to generate the invoices for the created customer. Stay tuned !!!
+In the next post there will be a procedure to generate the invoices for the created customer.
+
+Click [here](http://www.inkoop.in/blog/generate-invoice-using-quickbook-app-in-rails-1/) to check part 2.
 
 
 **~ Ameena **
