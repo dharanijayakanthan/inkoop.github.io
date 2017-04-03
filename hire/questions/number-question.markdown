@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: hire
 title: Number Game | Inkoop
 description: Number Game
 ---

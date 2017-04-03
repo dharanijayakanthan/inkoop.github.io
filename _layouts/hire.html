@@ -1,0 +1,24 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  {% include blog_header.html %}
+  <link rel="stylesheet" href="/css/hire.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <body>
+    <div class="container wrapper" id="hire_wrapper">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+    {% include css.html %}
+    {% include external.html %}
+    {% include js.html %}
+  </body>
+</html>
