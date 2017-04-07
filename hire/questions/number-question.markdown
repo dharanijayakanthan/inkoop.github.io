@@ -18,7 +18,7 @@ Build a game in Javascript with following rules -
 
 You can use any javascript plugin you are familiar with.
 
-Please send your solution to <a href= "mailto:vivek@inkoop.in">vivek@inkoop.in</a>
+Please send your solution to <a href= "mailto:hire@inkoop.in">hire@inkoop.in</a>
 
 Working Video
 

@@ -50,7 +50,7 @@ Clicking on B
   </ul>
 </p>
 
-Please send your solution to <a href= "mailto:vivek@inkoop.in">vivek@inkoop.in</a>
+Please send your solution to <a href= "mailto:hire@inkoop.in">hire@inkoop.in</a>
 
 Working Video
 
