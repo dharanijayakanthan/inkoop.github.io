@@ -45,7 +45,6 @@ Clicking on B
                     <li>B11</li>
                 </ul>
             </li>
-            </li>
         </ul>
     </li>
     <li>C</li>
