@@ -177,7 +177,7 @@
       var twitter_config = {
         'id':             twitterID,
         'domId':          'twitter-' + index,
-        'maxTweets':      2,
+        'maxTweets':      1,
         'enableLinks':    true,
         'showPermalinks': false
       };

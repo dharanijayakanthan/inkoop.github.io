@@ -4,6 +4,16 @@
  */
 
 /* clearfix */
+
+.owl-item{
+
+	display:flex;
+}
+.owl-carousel{
+
+	background-color:none;
+
+}
 .owl-carousel .owl-wrapper:after {
 	content: ".";
 	display: block;
@@ -11,6 +21,7 @@
 	visibility: hidden;
 	line-height: 0;
 	height: 0;
+width:100%;
 }
 /* display none until init */
 .owl-carousel{
@@ -43,6 +54,8 @@
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div{
 	cursor: pointer;
+	background:#666;
+
 }
 .owl-controls {
 	-webkit-user-select: none;
@@ -61,6 +74,7 @@
 /* fix */
 .owl-carousel  .owl-wrapper,
 .owl-carousel  .owl-item{
+	responsive:true;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility:    hidden;
 	-ms-backface-visibility:     hidden;
