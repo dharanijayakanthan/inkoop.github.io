@@ -1,9 +1,9 @@
 ---
 layout: hire
-title: Jquery List | Inkoop
-description: Jquery List
+title: List | Inkoop
+description: List
 ---
-# Jquery List
+# List
 
 Build the below question in Javascript with following rules-
 
