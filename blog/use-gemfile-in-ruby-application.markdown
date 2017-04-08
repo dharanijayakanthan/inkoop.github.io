@@ -72,7 +72,7 @@ The first line "require 'rspec'" makes sure that rspec is loaded. If rspec has a
 
 Suppose, you need more gems in your application then you can not keep adding require statements for every gem. To manage it in a better way, we will create a Gemfile.
 
-A Gemfile is a file which consists of all the gems that is needed for your application.
+A __Gemfile__ is a file which consists of all the gems that is needed for your application.
 
 The first step is to run bundle init command on the terminal. What this does is, it generates a Gemfile with default rubygems into the currently working directory.
 
